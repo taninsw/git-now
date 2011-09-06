@@ -1,6 +1,6 @@
 usage() {
   echo "usage: git now rebase [<base-branch>]"
-  echo "       git now rebase --push|-p [--remote|-r <remote>] [<base-branch>]"
+  echo "       git now rebase -p [-r <remote>] [<base-branch>]"
 }
 
 
