@@ -34,6 +34,8 @@ else
 	prefix=/usr/local
 endif
 
+gitcoredir=$(prefix)/git/libexec/git-core/
+
 # files that need mode 755
 EXEC_FILES=git-now
 
@@ -49,11 +51,11 @@ all:
 	@echo "       make uninstall"
 
 install:
-	install -d -m 0755 $(prefix)/bin
-	install -m 0755 $(EXEC_FILES) $(prefix)/bin
-	install -m 0644 $(SCRIPT_FILES) $(prefix)/bin
+	install -d -m 0755 $(gitcoredir)
+	install -m 0755 $(EXEC_FILES) $(gitcoredir)
+	install -m 0644 $(SCRIPT_FILES) $(gitcoredir)
 
 uninstall:
-	test -d $(prefix)/bin && \
-		cd $(prefix)/bin && \
+	test -d $(gitcoredir) && \
+		cd $(gitcoredir) && \
 		rm -f $(EXEC_FILES) $(SCRIPT_FILES)
