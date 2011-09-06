@@ -11,9 +11,8 @@ Create a temporary commit:
 
 You can use the same option as ``git add``.
 
-    $ git now [-n] [-v] [--force | -f] [--interactive | -i] [--patch | -p]
-              [--edit | -e] [--all | [--update | -u]] [--intent-to-add | -N]
-              [--refresh] [--ignore-errors] [--ignore-missing] [--]
+    $ git now [-n] [-v] [-f] [-i] [-p]
+              [-e] [-u] [-N]
               [<filepattern>...]
 
 ### Subcommands
@@ -32,12 +31,12 @@ Installation
 ### Mac OS
 If you're on a Mac and use [homebrew](http://github.com/mxcl/homebrew), it's simple:
 
-    $ brew install https://github.com/iwata/git-now/raw/master/git-now.rb
+    $ brew install https://github.com/taninsw/git-now/raw/master/git-now.rb
 
 ### Manual installation
 If you prefer a manual installation, please use the following instructions:
 
-	$ git clone --recursive git://github.com/iwata/git-now.git
+	$ git clone --recursive git://github.com/taninsw/git-now.git
 
 Then, you can install `git-now`, using:
 
