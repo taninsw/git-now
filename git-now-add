@@ -1,7 +1,6 @@
 usage() {
-  echo "usage: git now add [-n] [-v] [--force | -f] [--interactive | -i] [--patch | -p]"
-  echo "               [--edit | -e] [--all | [--update | -u]] [--intent-to-add | -N]"
-  echo "               [--refresh] [--ignore-errors] [--ignore-missing] [--]"
+  echo "usage: git now add [-n] [-v] [-f] [-i] [-p]"
+  echo "               [-e] [-u] [-N]"
   echo "               [<filepattern>...]"
 }
 
@@ -11,12 +10,8 @@ cmd_default() {
     git add -u
     printf "${MESSAGE}\n\n%s" "`git diff --cached`" | git commit -F -
   else
-    if [ $1 != "--all" ]; then
-      git add $@
-    else
-      git add -u
-      git add .
-    fi
+    git add -u
+    git add .
     printf "${MESSAGE}\n\n%s" "`git diff --cached`" | git commit -F -
   fi
 }
