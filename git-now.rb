@@ -6,12 +6,8 @@ class GitNow < Formula
   head 'https://github.com/iwata/git-now.git', :branch => 'develop'
   homepage 'https://github.com/iwata/git-now'
 
-  # for longopt
-  depends_on 'gnu-getopt'
-
   def install
     system "make", "prefix=#{prefix}", "install"
-    system "brew ln gnu-getopt"
   end
 
 end
