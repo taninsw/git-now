@@ -27,14 +27,7 @@
 # policies, either expressed or implied, of Vincent Driessen.
 #
 
-# Determine if we're inside a debian build .. 
-ifdef DEB_BUILD_ARCH
-	prefix=$(DESTDIR)/usr/
-else
-	prefix=/usr/local
-endif
-
-gitcoredir=$(prefix)/git/libexec/git-core/
+gitcoredir=/usr/local/git/libexec/git-core/
 
 # files that need mode 755
 EXEC_FILES=git-now
@@ -51,7 +44,6 @@ all:
 	@echo "       make uninstall"
 
 install:
-	install -d -m 0755 $(gitcoredir)
 	install -m 0755 $(EXEC_FILES) $(gitcoredir)
 	install -m 0644 $(SCRIPT_FILES) $(gitcoredir)
 
