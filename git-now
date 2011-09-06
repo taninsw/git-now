@@ -9,9 +9,8 @@ export GITNOW_DIR=$(dirname "$0")
 PREFIX="from now"
 
 usage() {
-  echo "usage: git now [-n] [-v] [--force | -f] [--interactive | -i] [--patch | -p]"
-  echo "               [--edit | -e] [--all | [--update | -u]] [--intent-to-add | -N]"
-  echo "               [--refresh] [--ignore-errors] [--ignore-missing] [--]"
+  echo "usage: git now [-n] [-v] [-f] [-i] [-p]"
+  echo "               [-e] [-u] [-N]"
   echo "               [<filepattern>...]"
   echo
   echo "       git now <subcommand>"
